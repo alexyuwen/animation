@@ -58,3 +58,13 @@ function draw() {
 function startAudio() {
   userStartAudio();
 }
+
+/*
+
+
+
+RECORDING FUNCTIONS
+
+
+
+*/

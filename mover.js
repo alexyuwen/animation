@@ -28,7 +28,6 @@ class Mover {
 
     show() {
       if (this.emilyFlag) {
-        print("true");
         image(emily, this.position.x, this.position.y, photoScaling * emily.width, photoScaling * emily.height);
       } else {
         stroke(100);
