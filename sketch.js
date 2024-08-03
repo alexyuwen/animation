@@ -22,13 +22,21 @@ MAIN FUNCTIONS
 
 */
 
+function preload() {
+  // emily = loadImage("media/emily.JPG");
+}
+
 function setup() {
   getAudioContext().suspend();
-  canvas = createCanvas(1000, 500);
   frameRate(60);
+
+  canvasWidth = windowWidth;
+  canvasHeight = windowHeight;
+  canvas = createCanvas(canvasWidth, canvasHeight);
+  
   canvas.mousePressed(startAudio);
 
-  mover = new Mover(400, 400);
+  mover = new Mover(400, 100);
   gravity = createVector(0, 0.1);
 }
 

@@ -17,9 +17,9 @@ class Mover {
     }
 
     show() {
-        stroke(255);
+        stroke(100);
         strokeWeight(2);
-        fill(255);
-        circle(this.x, this.y, 40);
+        fill(100);
+        circle(this.position.x, this.position.y, 40);
     }
   }
