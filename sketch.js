@@ -10,12 +10,10 @@ GLOBAL VARIABLES
 
 let canvas;
 let mover;
-let mover2;
-let G = 1.0;
-let gravity;
 let surfaceY = 600;
-let emily;
-
+let G = 0.3;
+let gravity;
+let friction;
 /*
 
 
@@ -26,10 +24,6 @@ MAIN FUNCTIONS
 
 */
 
-function preload() {
-  emily = loadImage("media/emily.JPG");
-}
-
 function setup() {
   getAudioContext().suspend();
   frameRate(60);
@@ -38,21 +32,17 @@ function setup() {
   
   canvas.mousePressed(startAudio);
 
-  mover = new Mover(200, 50, false);
-  mover2 = new Mover(700, 50, true);
+  mover = new Mover((200), 50);
   gravity = createVector(0, G);
+  
 }
 
 function draw() {
-  background(0);
+  background(255);
 
-  mover.applyForce(gravity);
-  mover.show();
+  mover.applyGravity();
   mover.update();
-
-  mover2.applyForce(gravity);
-  mover2.show();
-  mover2.update();
+  mover.show();
 }
 
 function startAudio() {
