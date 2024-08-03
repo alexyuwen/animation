@@ -30,7 +30,7 @@ function setup() {
 
   canvas = createCanvas(windowWidth, windowHeight);
   
-  canvas.mousePressed(startAudio);
+  canvas.mousePressed(startRecording);
 
   mover = new Mover((200), 50);
   gravity = createVector(0, G);
@@ -45,7 +45,7 @@ function draw() {
   mover.show();
 }
 
-function startAudio() {
+function startRecording() {
   userStartAudio();
 }
 
